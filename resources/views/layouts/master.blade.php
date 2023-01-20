@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/theme.css') }}">
-    
+    @yield('hojas-estilo')
 </head>
 <body class="bg-body-tertiary">
   <div class="container-fliuid p-0">
@@ -35,24 +35,24 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="/dist/home.html">Inicio</a>
+            <li class="nav-item @if(Route::current()->getName()=='home.index') active @endif">
+              <a class="nav-link" aria-current="page" href="{{route('home.index')}}">Inicio</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="/dist/matriculas.html">Matriculas</a>
+            <li class="nav-item @if(Route::current()->getName()=='matriculas.index') active @endif">
+              <a class="nav-link" href="{{route('matriculas.index')}}">Matriculas</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/dist/alumnos.html">Buscar Alumnos</a>
+            <li class="nav-item @if(Route::current()->getName()=='alumnos.index') active @endif">
+              <a class="nav-link" href="{{route('alumnos.index')}}">Buscar Alumnos</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/dist/profesores.html">Buscar Profesores
+            <li class="nav-item @if(Route::current()->getName()=='profesores.index') active @endif">
+              <a class="nav-link" href="{{route('profesores.index')}}">Buscar Profesores
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/dist/cursos.html">Cursos</a>
+              <a class="nav-link" href="/cursos">Cursos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/dist/talleres.html">Talleres</a>
+              <a class="nav-link" href="/talleres">Talleres</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">
@@ -71,7 +71,7 @@
     <!--/navbar-->
 
     <!--contenido-->
-    <div class="row p-2 m-0">
+    <div class="row p-0 m-0">
         @yield('contenido-principal')
     </div>
     <!--/contenido-->
@@ -79,6 +79,6 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
-
+    @yield('scripts')
 </body>
 </html>

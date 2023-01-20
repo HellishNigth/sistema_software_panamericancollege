@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MatriculasController;
+use App\Http\Controllers\AlumnosController;
+use App\Http\Controllers\ProfesoresController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,6 +21,8 @@ use App\Http\Controllers\MatriculasController;
     return view('welcome');
 });*/
 
-Route::get('/',[HomeController::class,'index']);
+Route::get('/',[HomeController::class,'index'])->name('home.index');
 Route::get('/login',[HomeController::class,'login']);
-Route::get('/matriculas',[MatriculasController::class,'index']);
+Route::get('/matriculas',[MatriculasController::class,'index'])->name('matriculas.index');
+Route::get('/alumnos',[AlumnosController::class,'index'])->name('alumnos.index');
+Route::get('/profesores',[ProfesoresController::class,'index'])->name('profesores.index');
