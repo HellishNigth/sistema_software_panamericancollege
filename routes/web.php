@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MatriculasController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +15,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
-});
+});*/
+
+Route::get('/',[HomeController::class,'index']);
+Route::get('/login',[HomeController::class,'login']);
+Route::get('/matriculas',[MatriculasController::class,'index']);
