@@ -48,11 +48,11 @@
               <a class="nav-link" href="{{route('profesores.index')}}">Buscar Profesores
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/cursos">Cursos</a>
+            <li class="nav-item @if(Route::current()->getName()=='cursos.index') active @endif">
+              <a class="nav-link" href="{{route('cursos.index')}}">Cursos</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/talleres">Talleres</a>
+            <li class="nav-item @if(Route::current()->getName()=='talleres.index') active @endif">
+              <a class="nav-link" href="{{route('talleres.index')}}">Talleres</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">
@@ -71,7 +71,7 @@
     <!--/navbar-->
 
     <!--contenido-->
-    <div class="row p-0 m-0">
+    <div class="row p-2 m-0">
         @yield('contenido-principal')
     </div>
     <!--/contenido-->

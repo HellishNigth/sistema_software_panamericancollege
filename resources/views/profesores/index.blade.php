@@ -51,9 +51,9 @@
     </div>
 </div>
     <!--/Tabla-->
-<div class="row col">
+<div class="row col m-0">
     <!--Formulario-->
-    <div class="col-14 ">
+    <div class="col-14">
         <div class="card">
             <div class="card-header bg-secondary">
                 Buscar Profesor
