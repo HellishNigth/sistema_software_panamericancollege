@@ -19,36 +19,49 @@
                     <!--Titulo y logo-->
                         <div class="col-lg-4 bg-primary d-flex flex-column justify-content-center align-items-center text-center">
                             <div class="p-2 mb-3 rounded">
-                                <img src="{{asset('css/images/panamericanLogo.png')}}" class="redondo">
+                                <img src="{{asset('images/panamericanLogo.png')}}" class="redondo">
                             </div>
                             <h4 style="color: white;">Pan American College</h4>
                         </div>
 
                     <!--/Titulo y logo-->
+
+                    <!--Formulario-->
                         <div class="col-8 bg-white d-flex flex-column justify-content-center">
                             <h4>Inició de sesión</h4>
                             <small>Proporcione sus credenciales para ingresar al sistema</small>
                             <div class="card">
                                 <div class="card-body">
-                                    <form>
+                                    <form method="POST" action="{{route('usuarios.login')}}">
+                                        @csrf
                                         <div class="form-group">
-                                            <label for="username">Nombre de Usuario</label>
-                                            <input type="text" id="username" class="form-control" style="background-color: white;">
+                                            <label for="nombreUsuario">Nombre Usuario:</label>
+                                            <input type="text" id="nombreUsuario" name="nombreUsuario" class="form-control" style="background-color: white;">
                                         </div>
                                         <div class="form-group mb-2">
                                             <label for="password">Contraseña:</label>
-                                            <input type="password" id="password" class="form-control" style="background-color: white;">
+                                            <input type="password" id="password" name="password" class="form-control" style="background-color: white;">
                                         </div>
-                                        
-                                        <div>
-                                            <button class="btn btn-success">Iniciar Sesión</button>
+                                        <div class="row">
+                                            <div class="col col-lg-4 offset-lg-8">
+                                                <button type="submit" class="btn btn-success btn-block">Iniciar Sesión</button>
+                                            </div>
                                         </div>
                                     </form>
                                 </div>
                             </div>
+                            {{-- Validacion --}}
+                            @if ($errors->any())
+                                <div class="alert alert-danger">
+                                    <ul class="mb-0">
+                                        @foreach ($errors->all() as $error)
+                                            <li>{{$error}}</li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            @endif
+                    {{-- Validacion --}}
                         </div>
-                    <!--Formulario-->
-    
                     <!--/Formulario-->
                 </div>
             </div>

@@ -21,7 +21,7 @@
             <small>Ultimo inicio de sesión: 09/01/2023 a 14:30</small>
         </div>
         <div class="col-1 text-right">
-            <a href="/dist/index.html" class="text-white">Cerrar Sesión</a>
+            <a href="{{route('usuarios.logout')}}" class="text-white">Cerrar Sesión</a>
         </div>
     </div>
     <!--/usuario-->
@@ -55,14 +55,13 @@
               <a class="nav-link" href="{{route('talleres.index')}}">Talleres</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" id="navbarDropdown" aria-expanded="false">
                 Opciones
               </a>
-              <ul class="dropdown-menu">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </ul>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Cambiar Contraseña</a>
+                <a class="dropdown-item d-lg-none" href="{{route('usuarios.logout')}}">Cerrar Sesión</a>
+              </div>
             </li>
           </ul>
         </div>

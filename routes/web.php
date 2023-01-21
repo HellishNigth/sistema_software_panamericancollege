@@ -7,6 +7,7 @@ use App\Http\Controllers\AlumnosController;
 use App\Http\Controllers\ProfesoresController;
 use App\Http\Controllers\CursosController;
 use App\Http\Controllers\TalleresController;
+use App\Http\Controllers\UsuariosController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,9 +25,12 @@ use App\Http\Controllers\TalleresController;
 });*/
 
 Route::get('/',[HomeController::class,'index'])->name('home.index');
-Route::get('/login',[HomeController::class,'login']);
+Route::get('/login',[HomeController::class,'login'])->name('home.login');
 Route::get('/matriculas',[MatriculasController::class,'index'])->name('matriculas.index');
 Route::get('/alumnos',[AlumnosController::class,'index'])->name('alumnos.index');
 Route::get('/profesores',[ProfesoresController::class,'index'])->name('profesores.index');
 Route::get('/cursos',[CursosController::class,'index'])->name('cursos.index');
 Route::get('/talleres',[TalleresController::class,'index'])->name('talleres.index');
+
+Route::post('/usuarios/login',[UsuariosController::class, 'login'])->name('usuarios.login');
+Route::get('/usuarios/logout',[UsuariosController::class, 'logout'])->name('usuarios.logout');
