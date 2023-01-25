@@ -22,17 +22,20 @@
     <div class="col-9 col-lg-8 mt-1 mt-lg-0">
         <table class="table table-bordered table-striped table-hover">
             <thead>
+                <th>N°</th>
                 <th>Curso</th>
                 <th>Paralelo</th>
                 <th>Cantidad alumnos</th>
                 <th>Cupos</th>
                 <th>Acciones</th>
             </thead>
+            @foreach ($cursos as $num=>$curso)
             <tr>
-                <td>4 Medio</td>
-                <td>A</td>
-                <td>20</td>
-                <td>10</td>
+                <td>{{$num+1}}</td>
+                <td>{{$curso->CR}}</td>
+                <td>{{$curso->PL}}</td>
+                <td>{{$curso->cantidadAlumnos}}</td>
+                <td>{{$curso->cupos}}</td>
                 <td>
                     <a href="#" class="btn btn-sm btn-danger">
                         <i class="far fa-trash-alt"></i>
@@ -47,7 +50,8 @@
                         <i class="fas fa-solid fa-inbox"></i>
                     </a>
                 </td>
-            </tr>
+            </tr>  
+            @endforeach
         </table>
     </div>
     <!--/Tabla-->
@@ -59,22 +63,23 @@
                 Agregar Curso
             </div>
             <div class="card-body">
-                <form>
+                <form method="POST" action="{{route('cursos.store')}}">
+                    @csrf
                     <div class="form-group">
                         <label for="curso">Curso:</label>
-                        <input type="text" id="curso" class="form-control" style="background-color: white;">
+                        <input type="text" id="curso" name="nom_curso" class="form-control" style="background-color: white;">
                     </div>
                     <div class="form-group">
                         <label for="paralelo">Paralelo:</label>
-                        <input type="text" id="paralelo" class="form-control" style="background-color: white;">
+                        <input type="text" id="paralelo" name="paralelo" class="form-control" style="background-color: white;">
                     </div>
                     <div class="form-group">
-                        <label for="paralelo">Cupos:</label>
-                        <input type="text" id="paralelo" class="form-control" style="background-color: white;">
+                        <label for="cupos">Cupos:</label>
+                        <input type="text" id="cupos" name="cupos" class="form-control" style="background-color: white;">
                     </div>
                     <div class="form-group">
-                        <button class="btn btn-warning">Cancelar</button>
-                        <button class="btn btn-info">Agregar</button>
+                        <button type="reset" class="btn btn-warning">Cancelar</button>
+                        <button type="submit" class="btn btn-info">Agregar</button>
                     </div>
                 </form>
             </div>

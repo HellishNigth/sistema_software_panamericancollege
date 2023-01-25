@@ -15,7 +15,10 @@ return new class extends Migration
     {
         Schema::create('cursos', function (Blueprint $table) {
             $table->id();
-            $table->string('CR_PL',30)->unique();
+            $table->string('CR',30);
+            $table->string('PL',5);
+            $table->tinyInteger('cantidadAlumnos');
+            $table->tinyInteger('cupos');
             $table->timestamps();
         });
     }

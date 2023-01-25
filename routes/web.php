@@ -29,7 +29,10 @@ Route::get('/login',[HomeController::class,'login'])->name('home.login');
 Route::get('/matriculas',[MatriculasController::class,'index'])->name('matriculas.index');
 Route::get('/alumnos',[AlumnosController::class,'index'])->name('alumnos.index');
 Route::get('/profesores',[ProfesoresController::class,'index'])->name('profesores.index');
+
 Route::get('/cursos',[CursosController::class,'index'])->name('cursos.index');
+Route::post('/cursos',[CursosController::class,'store'])->name('cursos.store');
+
 Route::get('/talleres',[TalleresController::class,'index'])->name('talleres.index');
 
 Route::post('/usuarios/login',[UsuariosController::class, 'login'])->name('usuarios.login');
