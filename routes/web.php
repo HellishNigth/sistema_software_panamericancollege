@@ -32,6 +32,7 @@ Route::get('/profesores',[ProfesoresController::class,'index'])->name('profesore
 
 Route::get('/cursos',[CursosController::class,'index'])->name('cursos.index');
 Route::post('/cursos',[CursosController::class,'store'])->name('cursos.store');
+Route::delete('/cursos/{curso}',[CursosController::class,'destroy'])->name('cursos.destroy');
 
 Route::get('/talleres',[TalleresController::class,'index'])->name('talleres.index');
 

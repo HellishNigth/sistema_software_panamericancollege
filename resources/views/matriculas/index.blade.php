@@ -55,14 +55,6 @@
                     </select>
                 </div>
                 <div class="col-2">
-                    <label for="talleres">Talleres:</label>
-                    <select name="cursos" id="cursos" class="form-control" style="background-color: white;">
-                        <option value="1">Futball</option>
-                        <option value="2">Ajedrez</option>
-                        <option value="3">tipo 3</option>
-                    </select>
-                </div>
-                <div class="col-2">
                     <label for="talleres">Plan de salud:</label>
                     <select name="cursos" id="cursos" class="form-control" style="background-color: white;">
                         <option value="1">Fonasa</option>

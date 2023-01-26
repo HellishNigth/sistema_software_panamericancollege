@@ -27,7 +27,7 @@
                 <th>Paralelo</th>
                 <th>Cantidad alumnos</th>
                 <th>Cupos</th>
-                <th>Acciones</th>
+                <th colspan="4">Acciones</th>
             </thead>
             @foreach ($cursos as $num=>$curso)
             <tr>
@@ -37,16 +37,28 @@
                 <td>{{$curso->cantidadAlumnos}}</td>
                 <td>{{$curso->cupos}}</td>
                 <td>
-                    <a href="#" class="btn btn-sm btn-danger">
-                        <i class="far fa-trash-alt"></i>
-                    </a>
-                    <a href="#" class="btn btn-sm btn-warning">
+                    <!--Borrar-->
+                    <form method="POST" action="{{route('cursos.destroy',$curso->id)}}">
+                        @csrf
+                        @method('delete')
+                        <button type="submit" class="btn btn-sm btn-danger" title="Borrar Curso">
+                            <i class="far fa-trash-alt"></i>
+                        </button>
+                    </form>
+                    <!--/Borrar-->
+                </td>
+                <td>
+                    <a href="#" class="btn btn-sm btn-warning" title="Editar Curso">
                         <i class="far fa-edit"></i>
                     </a>
-                    <a href="#" class="btn btn-sm btn-success">
+                </td>
+                <td>
+                    <a href="#" class="btn btn-sm btn-success" title="Ver Curso">
                         <i class="fas fa-user-friends"></i>
                     </a>
-                    <a href="#" class="btn btn-sm btn-light">
+                </td>
+                <td>
+                    <a href="#" class="btn btn-sm btn-light" title="Imprimir datos del curso">
                         <i class="fas fa-solid fa-inbox"></i>
                     </a>
                 </td>
