@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Matricula extends Model
 {
     use HasFactory;
+    protected $table = 'matriculas';
+    
+
+    public function cursos(){
+        return $this->belongsTo('App\Models\Curso');
+    }
 }

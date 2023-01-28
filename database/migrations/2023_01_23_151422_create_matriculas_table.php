@@ -19,6 +19,8 @@ return new class extends Migration
             $table->string('MTR_CR_PL',30);
             $table->string('MTR_EST',50);
             $table->timestamps();
+            $table->unsignedBigInteger('curso_id');
+            $table->foreign('curso_id')->references('id')->on('cursos');
         });
     }
 

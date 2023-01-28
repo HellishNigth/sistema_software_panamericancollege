@@ -15,8 +15,20 @@
                     <input type="text" id="nom_alumn" class="form-control" style="background-color: white;">
                 </div>
                 <div class="col-2">
-                    <label for="ape_alumn">Apellidos Alumno:</label>
-                    <input type="text" id="ape_alumn" class="form-control" style="background-color: white;">
+                    <label for="edad_alumn">Edad Alumno:</label>
+                    <input type="text" id="edad_alumn" class="form-control" style="background-color: white;">
+                </div>
+                <div class="col-2">
+                    <label for="ape_pa_alumn">Apellido Paterno:</label>
+                    <input type="text" id="ape_pa_alumn" class="form-control" style="background-color: white;">
+                </div>
+                <div class="col-2">
+                    <label for="ape_ma_alumn">Apellido Materno:</label>
+                    <input type="text" id="ape_ma_alumn" class="form-control" style="background-color: white;">
+                </div>
+                <div class="form-group col-3">
+                    <label for="imagenAlumn">Imagen del alumno:</label>
+                    <input type="file" id="imagenAlumn" name="imagenAlumn" class="form-control-file">
                 </div>
                 <div class="col-2">
                     <label for="genero">Genero:</label>
@@ -25,10 +37,6 @@
                 <div class="col-2">
                     <label for="rut">RUT:</label>
                     <input type="text" id="rut" class="form-control" style="background-color: white;">
-                </div>
-                <div class="form-group col-3">
-                    <label for="imagenAlumn">Imagen del alumno:</label>
-                    <input type="file" id="imagenAlumn" name="imagenAlumn" class="form-control-file">
                 </div>
                 <div class="col-2">
                     <label for="tipo_alumn">Tipo de alumno:</label>
@@ -60,6 +68,10 @@
                         <option value="1">Fonasa</option>
                         <option value="2">Isapre</option>
                     </select>
+                </div>
+                <div class="col-2">
+                    <label for="cant_sem">Cantidad Semestres:</label>
+                    <input type="number" id="cant_sem" class="form-control" style="background-color: white;">
                 </div>
                 <div class="col-12">
                     <label for="alergias" class="row m-2">Alergias del alumno:</label>

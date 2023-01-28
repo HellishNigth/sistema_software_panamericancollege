@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Matricula;
+use App\Models\Curso;
 
 class MatriculasController extends Controller
 {
@@ -11,6 +13,19 @@ class MatriculasController extends Controller
     }
     
     public function index(){
-        return view('matriculas.index');
+        $matriculas = Matricula::all();
+        $cursos = Curso::all();
+        return view('matriculas.index',compact('matriculas','cursos'));
+    }
+
+    public function store(Request $request){
+        $matricula = new Matricula();
+        $matricula->MTR_SM = $request->cant_sem;
+        $curso = Curso::findOrFail($request->$curso);
+        $CursoCompleto += $curso->CR + $curso->PL;
+        $matricula->MTR_CR_PL = $CursoCompleto;
+        $matricula->MTR_EST = $request->tipo_alumn;
+        $matricula->save();
+        return redirect()->route('alumnos.index');
     }
 }
