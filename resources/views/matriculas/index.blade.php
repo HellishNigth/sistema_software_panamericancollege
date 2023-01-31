@@ -57,9 +57,17 @@
                 <div class="col-2">
                     <label for="cursos">Cursos:</label>
                     <select name="cursos" id="cursos" class="form-control" style="background-color: white;">
-                        <option value="1">4 Medio A</option>
-                        <option value="2">4</option>
-                        <option value="3">tipo 3</option>
+                        @foreach ($cursos as $curso)
+                            <option value="{{$curso->id}}">{{$curso->CR}}</option>
+                        @endforeach
+                    </select>
+                </div>
+                <div class="col-2">
+                    <label for="paralelos">Paralelos:</label>
+                    <select name="paralelos" id="paralelos" class="form-control" style="background-color: white;">
+                        @foreach ($cursos as $curso)
+                            <option value="{{$curso->id}}">{{$curso->PL}}</option>
+                        @endforeach
                     </select>
                 </div>
                 <div class="col-2">
