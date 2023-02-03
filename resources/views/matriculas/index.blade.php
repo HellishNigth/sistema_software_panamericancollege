@@ -16,7 +16,7 @@
                 </div>
                 <div class="col-2">
                     <label for="edad_alumn">Edad Alumno:</label>
-                    <input type="text" id="edad_alumn" class="form-control" style="background-color: white;">
+                    <input type="number" id="edad_alumn" class="form-control" style="background-color: white;">
                 </div>
                 <div class="col-2">
                     <label for="ape_pa_alumn">Apellido Paterno:</label>
@@ -32,27 +32,11 @@
                 </div>
                 <div class="col-2">
                     <label for="genero">Genero:</label>
-                    <input type="text" id="genero" class="form-control" style="background-color: white;">
+                    <input type="text" id="genero_alumn" class="form-control" style="background-color: white;">
                 </div>
                 <div class="col-2">
                     <label for="rut">RUT:</label>
-                    <input type="text" id="rut" class="form-control" style="background-color: white;">
-                </div>
-                <div class="col-2">
-                    <label for="tipo_alumn">Tipo de alumno:</label>
-                    <select name="tipo_alumn" id="tipo_alumn" class="form-control" style="background-color: white;">
-                        <option value="1">prioritario</option>
-                        <option value="2">tipo 2</option>
-                        <option value="3">tipo 3</option>
-                    </select>
-                </div>
-                <div class="col-2">
-                    <label for="apo">Apoderado:</label>
-                    <input type="text" id="apo" class="form-control" style="background-color: white;">
-                </div>
-                <div class="col-2">
-                    <label for="tel_emg">Telefono de emergencia:</label>
-                    <input type="text" id="tel_emg" class="form-control" style="background-color: white;">
+                    <input type="text" id="rut_alumn" class="form-control" style="background-color: white;">
                 </div>
                 <div class="col-2">
                     <label for="cursos">Cursos:</label>
@@ -77,13 +61,49 @@
                         <option value="2">Isapre</option>
                     </select>
                 </div>
-                <div class="col-2">
-                    <label for="cant_sem">Cantidad Semestres:</label>
-                    <input type="number" id="cant_sem" class="form-control" style="background-color: white;">
-                </div>
                 <div class="col-12">
                     <label for="alergias" class="row m-2">Alergias del alumno:</label>
                     <textarea class="col-10 m-2" placeholder="Escriba alergias...." id="alergias" style="height: 100px;background-color: white;"></textarea>
+                </div>
+                <div class="col-2">
+                    <label for="apo_nom">Apoderado Nombres:</label>
+                    <input type="text" id="apo_nom" class="form-control" style="background-color: white;">
+                </div>
+                <div class="col-3">
+                    <label for="apo_appa">Apoderado Apellido Paterno:</label>
+                    <input type="text" id="apo_appa" class="form-control" style="background-color: white;">
+                </div>
+                <div class="col-3">
+                    <label for="apo_nom">Apoderado Apellido Materno:</label>
+                    <input type="text" id="apo_nom" class="form-control" style="background-color: white;">
+                </div>
+                <div class="col-2">
+                    <label for="apo_gen">Genero Apoderado:</label>
+                    <input type="text" id="apo_gen" class="form-control" style="background-color: white;">
+                </div>
+                <div class="col-2">
+                    <label for="edad_apo">Edad Apoderado:</label>
+                    <input type="number" id="edad_apo" class="form-control" style="background-color: white;">
+                </div>
+                <div class="col-2">
+                    <label for="email_apo">Email Apoderado:</label>
+                    <input type="number" id="email_apo" class="form-control" style="background-color: white;">
+                </div>
+                <div class="col-2">
+                    <label for="tel_apo">Telefono de emergencia:</label>
+                    <input type="text" id="tel_apo" class="form-control" style="background-color: white;">
+                </div>
+                <div class="col-2">
+                    <label for="tipo_alumn">Tipo de alumno:</label>
+                    <select name="tipo_alumn" id="tipo_alumn" class="form-control" style="background-color: white;">
+                        <option value="1">prioritario</option>
+                        <option value="2">tipo 2</option>
+                        <option value="3">tipo 3</option>
+                    </select>
+                </div>
+                <div class="col-2">
+                    <label for="cant_sem">Cantidad Semestres:</label>
+                    <input type="number" id="cant_sem" class="form-control" style="background-color: white;">
                 </div>
                 <div class="col-12">
                     <div class="btn-group d-flex m-2">

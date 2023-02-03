@@ -15,12 +15,9 @@ return new class extends Migration
     {
         Schema::create('matriculas', function (Blueprint $table) {
             $table->id('NM_MTR');
-            $table->string('MTR_SM',50)->unique();
-            $table->string('MTR_CR_PL',30);
+            $table->tinyInteger('MTR_SM');
             $table->string('MTR_EST',50);
             $table->timestamps();
-            $table->unsignedBigInteger('curso_id');
-            $table->foreign('curso_id')->references('id')->on('cursos');
         });
     }
 

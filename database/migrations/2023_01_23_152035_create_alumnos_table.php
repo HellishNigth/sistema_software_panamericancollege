@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('AL_DP_APMA',50);
             $table->string('AL_DP_GN',30);
             $table->string('AL_DP_CR',30);
-            $table->string('AL_DP_PL',30);
+            $table->string('AL_DP_PL',30)->nullable();
             $table->date('AL_DP_FCI');
             $table->date('AL_DP_FCE');
             $table->BigInteger('AL_DP_CLA');

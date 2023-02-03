@@ -21,9 +21,6 @@ class MatriculasController extends Controller
     public function store(Request $request){
         $matricula = new Matricula();
         $matricula->MTR_SM = $request->cant_sem;
-        $curso = Curso::findOrFail($request->$curso);
-        $CursoCompleto += $curso->CR + $curso->PL;
-        $matricula->MTR_CR_PL = $CursoCompleto;
         $matricula->MTR_EST = $request->tipo_alumn;
         $matricula->save();
         return redirect()->route('alumnos.index');

@@ -11,7 +11,4 @@ class Curso extends Model
     use HasFactory,SoftDeletes;
     protected $table = 'cursos';
 
-    public function matricula(){
-        return $this->hasMany('App\Models\Matricula');
-    }
 }
