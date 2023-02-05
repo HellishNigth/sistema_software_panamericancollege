@@ -31,11 +31,11 @@
                     <input type="file" id="imagenAlumn" name="imagenAlumn" class="form-control-file">
                 </div>
                 <div class="col-2">
-                    <label for="genero">Genero:</label>
+                    <label for="genero_alumn">Genero Alumno:</label>
                     <input type="text" id="genero_alumn" class="form-control" style="background-color: white;">
                 </div>
                 <div class="col-2">
-                    <label for="rut">RUT:</label>
+                    <label for="rut">RUT Alumno:</label>
                     <input type="text" id="rut_alumn" class="form-control" style="background-color: white;">
                 </div>
                 <div class="col-2">
@@ -94,6 +94,10 @@
                     <input type="text" id="tel_apo" class="form-control" style="background-color: white;">
                 </div>
                 <div class="col-2">
+                    <label for="rut_apo">RUT Apoderado:</label>
+                    <input type="text" id="rut_apo" class="form-control" style="background-color: white;">
+                </div>
+                <div class="col-2">
                     <label for="tipo_alumn">Tipo de alumno:</label>
                     <select name="tipo_alumn" id="tipo_alumn" class="form-control" style="background-color: white;">
                         <option value="1">prioritario</option>
@@ -102,8 +106,12 @@
                     </select>
                 </div>
                 <div class="col-2">
-                    <label for="cant_sem">Cantidad Semestres:</label>
-                    <input type="number" id="cant_sem" class="form-control" style="background-color: white;">
+                    <label for="fecha_inicio">Fecha inicio:</label>
+                    <input type="date" id="fecha_inicio" class="form-control" style="background-color: white;">
+                </div>
+                <div class="col-2">
+                    <label for="fecha_final">Fecha final:</label>
+                    <input type="date" id="fecha_final" class="form-control" style="background-color: white;">
                 </div>
                 <div class="col-12">
                     <div class="btn-group d-flex m-2">
