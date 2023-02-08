@@ -16,6 +16,7 @@
     <div class="col-12 col-lg-8 mt-1 mt-lg-0">
         <table class="col-12 table table-bordered table-striped table-hover">
             <thead>
+                <th>N°</th>
                 <th>RUT</th>
                 <th>Nombres</th>
                 <th>Apellidos</th>
@@ -23,12 +24,14 @@
                 <th>Paralelo</th>
                 <th>Acciones</th>
             </thead>
+            @foreach ($alumnos as $num=>$alumno)
             <tr>
-                <td>20567897-6</td>
-                <td>Ignacio Andrés</td>
-                <td>Opazo Castro</td>
-                <td>4 Medio</td>
-                <td>A</td>
+                <td>{{$num+1}}</td>
+                <td>{{$alumno->AL_DP_RUT}}</td>
+                <td>{{$alumno->AL_DP_NB}}</td>
+                <td>{{$alumno->AL_DP_APPA}} {{$alumno->AL_DP_APMA}}</td>
+                <td>{{$alumno->AL_DP_CR}}</td>
+                <td>{{$alumno->AL_DP_PL}}</td>
                 <td>
                     <a href="#" class="btn btn-sm btn-danger">
                         <i class="far fa-trash-alt"></i>
@@ -44,6 +47,7 @@
                     </a>
                 </td>
             </tr>
+            @endforeach
         </table>
     </div>
     <!--/Tabla-->

@@ -15,8 +15,9 @@ return new class extends Migration
     {
         Schema::create('matriculas', function (Blueprint $table) {
             $table->id('NM_MTR');
-            $table->tinyInteger('MTR_SM');
-            $table->string('MTR_EST',50);
+            $table->tinyInteger('MTR_EST');
+            $table->date('MTR_FECHA_INICIO');
+            $table->date('MTR_FECHA_FINAL');
             $table->timestamps();
         });
     }

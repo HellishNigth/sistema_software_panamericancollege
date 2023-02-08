@@ -26,7 +26,10 @@ use App\Http\Controllers\UsuariosController;
 
 Route::get('/',[HomeController::class,'index'])->name('home.index');
 Route::get('/login',[HomeController::class,'login'])->name('home.login');
+
 Route::get('/matriculas',[MatriculasController::class,'index'])->name('matriculas.index');
+Route::post('/matriculas',[MatriculasController::class,'store'])->name('matriculas.store');
+
 Route::get('/alumnos',[AlumnosController::class,'index'])->name('alumnos.index');
 Route::get('/profesores',[ProfesoresController::class,'index'])->name('profesores.index');
 
