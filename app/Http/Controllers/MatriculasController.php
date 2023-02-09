@@ -38,6 +38,7 @@ class MatriculasController extends Controller
         $alumno->AL_DP_FCI = $request->fecha_inicio;
         $alumno->AL_DP_FCE = $request->fecha_final;
         $alumno->AL_DP_CLA = 0;
+        $alumno->curso_id = $request->cursos_alumn;
         $alumno->save();
         return redirect()->route('alumnos.index');
     }
