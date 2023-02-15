@@ -89,12 +89,29 @@
                     </div>
                     <div class="col-2">
                         <label for="email_apo">Email Apoderado:</label>
-                        <input type="number" id="email_apo" name="email_apo" class="form-control" style="background-color: white;">
+                        <input type="text" id="email_apo" name="email_apo" class="form-control" style="background-color: white;">
                     </div>
-                    <div class="col-2">
+                    <div class="col-3">
                         <label for="tel_apo">Telefono de emergencia:</label>
                         <input type="text" id="tel_apo" name="tel_apo" class="form-control" style="background-color: white;">
                     </div>
+                    <div class="col-3">
+                        <label for="domicilio">Domicilio:</label>
+                        <input type="text" id="domicilio" name="domicilio" class="form-control" style="background-color: white;">
+                    </div>
+                    <div class="col-2">
+                        <label for="parentesco">Parentesco:</label>
+                        <select name="parentesco" id="parentesco" class="form-control" style="background-color: white;">
+                            <option value="1">Papá</option>
+                            <option value="2">Mamá</option>
+                            <option value="3">Abuelo</option>
+                            <option value="4">Abuela</option>
+                            <option value="5">Tío</option>
+                            <option value="6">Tía</option>
+                            <option value="7">Otro</option>
+                        </select>
+                    </div>
+
                     <div class="col-2">
                         <label for="rut_apo">RUT Apoderado:</label>
                         <input type="text" id="rut_apo" name="rut_apo" class="form-control" style="background-color: white;">
