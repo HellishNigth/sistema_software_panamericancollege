@@ -26,10 +26,6 @@ return new class extends Migration
             $table->string('APO_DP_TEL',120);
             $table->string('APO_DP_PARENT',120);
             $table->timestamps();
-            $table->unsignedBigInteger('curso_id');
-            $table->foreign('curso_id')->references('id')->on('cursos');
-            $table->unsignedBigInteger('matricula_id');
-            $table->foreign('matricula_id')->references('NM_MTR')->on('matriculas');
         });
     }
 
