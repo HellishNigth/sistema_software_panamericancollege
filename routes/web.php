@@ -8,6 +8,7 @@ use App\Http\Controllers\ProfesoresController;
 use App\Http\Controllers\CursosController;
 use App\Http\Controllers\TalleresController;
 use App\Http\Controllers\UsuariosController;
+use App\Http\Controllers\ApoderadosController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,6 +32,7 @@ Route::get('/matriculas',[MatriculasController::class,'index'])->name('matricula
 Route::post('/matriculas',[MatriculasController::class,'store'])->name('matriculas.store');
 
 Route::get('/alumnos',[AlumnosController::class,'index'])->name('alumnos.index');
+Route::get('/apoderados',[ApoderadosController::class,'index'])->name('apoderados.index');
 Route::get('/profesores',[ProfesoresController::class,'index'])->name('profesores.index');
 
 Route::get('/cursos',[CursosController::class,'index'])->name('cursos.index');

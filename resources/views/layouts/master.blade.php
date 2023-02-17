@@ -44,6 +44,9 @@
             <li class="nav-item @if(Route::current()->getName()=='alumnos.index') active @endif">
               <a class="nav-link" href="{{route('alumnos.index')}}">Buscar Alumnos</a>
             </li>
+            <li class="nav-item @if(Route::current()->getName()=='apoderados.index') active @endif">
+              <a class="nav-link" href="{{route('apoderados.index')}}">Buscar Apoderados</a>
+            </li>
             <li class="nav-item @if(Route::current()->getName()=='profesores.index') active @endif">
               <a class="nav-link" href="{{route('profesores.index')}}">Buscar Profesores
               </a>

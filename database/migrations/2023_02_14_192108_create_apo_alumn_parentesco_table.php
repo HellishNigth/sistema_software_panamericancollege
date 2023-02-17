@@ -14,7 +14,17 @@ return new class extends Migration
     public function up()
     {
         Schema::create('apo_alumn_parentesco', function (Blueprint $table) {
-            $table->id();
+            $table->unsignedBigInteger('apoderado_id');
+            $table->unsignedBigInteger('alumno_id');
+            $table->primary(['apoderado_id','alumno_id']);
+
+            //otros campos
+            $table->string('parentesco');
+            $table->unsignedSmallInteger('cant_alumn');
+
+            //relaciones
+            $table->foreign('apoderado_id')->references('id')->on('apoderados');
+            $table->foreign('alumno_id')->references('id')->on('alumnos');
             $table->timestamps();
         });
     }

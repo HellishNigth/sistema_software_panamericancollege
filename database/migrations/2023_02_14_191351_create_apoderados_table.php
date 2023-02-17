@@ -23,8 +23,9 @@ return new class extends Migration
             $table->string('APO_DP_GN',30);
             $table->string('APO_DP_EMAIL',30);
             $table->string('APO_DP_TEL',30);
-            $table->string('APO_DP_TEL',120);
+            $table->string('APO_DP_DOM',120);
             $table->string('APO_DP_PARENT',120);
+            $table->unsignedSmallInteger('total_alumn');
             $table->timestamps();
         });
     }
