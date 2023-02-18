@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Matricula;
 use App\Models\Curso;
 use App\Models\Alumno;
+use App\Models\Apoderado;
 
 class MatriculasController extends Controller
 {
@@ -17,7 +18,8 @@ class MatriculasController extends Controller
         $matriculas = Matricula::all();
         $cursos = Curso::all();
         $alumnos = Alumno::all();
-        return view('matriculas.index',compact('matriculas','cursos','alumnos'));
+        $apoderados = Apoderado::all();
+        return view('matriculas.index',compact('matriculas','cursos','alumnos','apoderados'));
     }
 
     public function store(Request $request){
@@ -40,6 +42,19 @@ class MatriculasController extends Controller
         $alumno->AL_DP_CLA = 0;
         $alumno->curso_id = $request->cursos_alumn;
         $alumno->save();
+        $apoderado = new Apoderado();
+        $apoderado->APO_DP_RUT = $request->rut_apo;
+        $apoderado->APO_DP_ED = $request->edad_apo;
+        $apoderado->APO_DP_NB = $request->apo_nom;
+        $apoderado->APO_DP_APPA = $request->apo_appa;
+        $apoderado->APO_DP_APMA = $request->apo_apma;
+        $apoderado->APO_DP_GN = $request->apo_gen;
+        $apoderado->APO_DP_EMAIL = $request->email_apo;
+        $apoderado->APO_DP_TEL = $request->tel_apo;
+        $apoderado->APO_DP_DOM = $request->domicilio;
+        $apoderado->APO_DP_PARENT = $request->parentesco;
+        $apoderado->total_alumn +=1;
+        $apoderado->save();
         return redirect()->route('alumnos.index');
     }
 }
