@@ -26,11 +26,10 @@
             @foreach ($apoderados as $num=>$apoderado)
             <tr>
                 <td>{{$num+1}}</td>
-                <td>{{$apoderado->AL_DP_RUT}}</td>
-                <td>{{$apoderado->AL_DP_NB}}</td>
-                <td>{{$apoderado->AL_DP_APPA}} {{$alumno->AL_DP_APMA}}</td>
-                <td>{{$apoderado->AL_DP_CR}}</td>
-                <td>{{$apoderado->AL_DP_PL}}</td>
+                <td>{{$apoderado->APO_DP_RUT}}</td>
+                <td>{{$apoderado->APO_DP_NB}}</td>
+                <td>{{$apoderado->APO_DP_APPA}} {{$apoderado->APO_DP_APMA}}</td>
+                <td>{{$apoderado->total_alumn}}</td>
                 <td>
                     <a href="#" class="btn btn-sm btn-danger">
                         <i class="far fa-trash-alt"></i>

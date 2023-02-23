@@ -36,8 +36,8 @@
             <div class="card-body bg-light">
                 <h5 class="card-tittle text-center">Profesores</h5>
                 <div class="btn-group d-flex">
-                    <a class="btn btn-outline-success">Buscar</a>
-                    <a class="btn btn-outline-success">Agregar</a>
+                    <a class="btn btn-outline-success" href="{{route('profesores.index')}}">Buscar</a>
+                    <a class="btn btn-outline-success" href="{{route('profesores.index')}}">Agregar</a>
                 </div>
             </div>
         </div>
